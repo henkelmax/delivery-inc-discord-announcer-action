@@ -27,6 +27,7 @@ function connectAndSend(token, channelID, version, changelog) {
             console.log(`Logged in as ${client.user.tag}!`);
             const channel = await client.channels.fetch(channelID);
             await sendAnnouncement(channel, version, changelog);
+            client.destroy();
             resolve();
         });
         client.login(token);
