@@ -1,0 +1,18 @@
+name: 'Delivery Inc Discord Announcer'
+description: 'Announces updates of the modpack'
+inputs:
+  bot-token:
+    description: 'The bot token'
+    required: true
+  channel-id:
+    description: 'The channel ID to announce to'
+    required: true
+  version:
+    description: 'The modpack version'
+    required: true
+  changelog-path:
+    description: 'The path to the changelog'
+    required: false
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
